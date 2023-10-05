@@ -12,7 +12,7 @@ const ValueSection = () => {
         placeholder image
       </div>
 
-      <p className="text-white leading-relaxed p-3 px-5 pl-5">
+      <p className="text-white leading-relaxed p-3 px-5 pl-5 md:px-9">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam explicabo a sequi?
         Voluptatibus eaque nisi illum natus necessitatibus impedit quae id!
         <br />

@@ -2,7 +2,8 @@ import "./App.css";
 
 import components from "./components";
 
-const { Header, MainSection, ServiceSection, ValueSection, Footer } = components;
+const { Header, MainSection, ServiceSection, ValueSection, TutorialSection, Footer } =
+  components;
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <ValueSection />
       <div className="divider"></div>
       <ServiceSection />
+      <div className="divider"></div>
+      <TutorialSection />
       <div className="divider"></div>
       <Footer></Footer>
     </div>

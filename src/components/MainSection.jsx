@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const MainSection = () => {
   return (
     <section className="bg-slate-900 px-1 mt-[88px]">
-      <h1 className="text-5xl leading-10 uppercase font-extrabold opacity-10 text-gray-400 text-center py-8">
+      <h1 className="text-5xl sm:text-7xl lg:text-9xl leading-10 uppercase font-extrabold opacity-10 text-gray-400 text-center py-8">
         Calcufast
       </h1>
 
@@ -13,7 +13,7 @@ const MainSection = () => {
         </div>
 
         <div className="w-full md:w-2/3">
-          <h4 className="py-4 m-auto w-4/5 md:text-3xl lg:text-4xl text-center leading-10 text-white text-4xl capitalize">
+          <h4 className="py-4 m-auto w-4/5 md:text-3xl lg:text-4xl text-center leading-10 text-white text-3xl capitalize">
             Hello, my name is calcufast
           </h4>
 
@@ -33,11 +33,7 @@ const MainSection = () => {
 };
 
 const TextChangingComponent = () => {
-  const phrases = [
-    "Lorem ipsum dolor sit amet,",
-    "Consectetur adipiscing elit,",
-    "Sed do eiusmod",
-  ];
+  const phrases = ["Lorem ipsum dolor sit", "Consectetur adipiscing", "Sed do eiusmod"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
