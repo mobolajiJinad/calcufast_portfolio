@@ -1,0 +1,7 @@
+.divider {
+  margin: 2rem 0;
+  margin-left: auto;
+  width: 70%;
+  height: 0.125rem;
+  background: linear-gradient(90deg, #ff4d54 0%, #007fff 100%);
+}
