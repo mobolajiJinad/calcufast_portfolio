@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 const ServiceSection = () => {
   return (
     <section className="text-[#C8C8C8] bg-[#202123] pt-4 pb-10" id="services">
-      <h3 className="text-center text-2xl uppercase tracking-wider my-4">services</h3>
+      <h3
+        style={{ fontFamily: "'Bungee Outline', cursive" }}
+        className="text-center text-2xl md:text-5xl uppercase tracking-wider my-4"
+      >
+        services
+      </h3>
 
       <div className="px-2 lg:flex lg:justify-around lg:items-center">
         <Card

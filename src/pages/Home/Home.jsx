@@ -1,9 +1,13 @@
 import "./Home.css";
 
-import components from "../../components/Home";
-
-const { Header, MainSection, ServiceSection, ValueSection, TutorialSection, Footer } =
-  components;
+import {
+  Header,
+  MainSection,
+  ServiceSection,
+  ValueSection,
+  TutorialSection,
+  Footer,
+} from "../../components/Home";
 
 const Home = () => {
   return (

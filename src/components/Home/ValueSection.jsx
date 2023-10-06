@@ -4,7 +4,12 @@ const ValueSection = () => {
   return (
     <section>
       <div className="my-3 flex justify-center items-center-center">
-        <h3 className="text-2xl uppercase text-white tracking-wider">value in the signal</h3>
+        <h3
+          style={{ fontFamily: "'Bungee Outline', cursive" }}
+          className="text-2xl md:text-5xl uppercase text-white tracking-wider"
+        >
+          value in the signal
+        </h3>
         <img className="mx-1" src={lightening} />
       </div>
 

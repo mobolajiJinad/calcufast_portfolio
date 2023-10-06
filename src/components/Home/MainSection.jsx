@@ -3,7 +3,10 @@ import { useState, useEffect } from "react";
 const MainSection = () => {
   return (
     <section className="bg-slate-900 px-1 mt-[88px]">
-      <h1 className="text-5xl sm:text-7xl lg:text-9xl leading-10 uppercase font-extrabold opacity-10 text-gray-400 text-center py-8">
+      <h1
+        style={{ fontFamily: "'Bungee Outline', cursive" }}
+        className="text-5xl sm:text-7xl lg:text-9xl leading-10 uppercase font-extrabold opacity-10 text-gray-400 text-center py-8"
+      >
         Calcufast
       </h1>
 
@@ -36,17 +39,31 @@ const TextChangingComponent = () => {
   const phrases = ["Lorem ipsum dolor sit", "Consectetur adipiscing", "Sed do eiusmod"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === phrases.length - 1 ? 0 : prevIndex + 1));
-    }, 1000);
+      if (textIndex < phrases[currentIndex].length) {
+        setCurrentText((prevText) => prevText + phrases[currentIndex][textIndex]);
+        setTextIndex((prevIndex) => prevIndex + 1);
+      } else {
+        clearInterval(intervalId);
+        setTimeout(() => {
+          setTextIndex(0);
+          setCurrentText("");
+          setCurrentIndex((prevIndex) =>
+            prevIndex === phrases.length - 1 ? 0 : prevIndex + 1
+          );
+        }, 1000);
+      }
+    }, 100);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentIndex, textIndex]);
 
   return (
-    <h5 className="text-3xl text-white text-center">
+    <h5 className="text-3xl text-white pl-[10%] lg:pl-[15%]">
       I{" "}
       <span
         style={{
@@ -56,7 +73,7 @@ const TextChangingComponent = () => {
           color: "transparent",
         }}
       >
-        {phrases[currentIndex]}
+        {currentText}
       </span>
     </h5>
   );
@@ -70,7 +87,7 @@ const ExperienceCard = ({ text1, text2 }) => {
 
   return (
     <div className="pt-3 pb-4 w-[47%] flex justify-center items-center flex-wrap">
-      <h3 className="text-4xl mx-1 text-white inline text-center">{text1}</h3>
+      <h3 className="text-4xl mx-1 md:text-6xl text-white inline text-center">{text1}</h3>
       <span className="text-xs text-white uppercase inline-block">
         {upperText2} <br />
         {lowerText2}

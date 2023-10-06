@@ -1,4 +1,4 @@
-import Header from "../../components/General/Header";
+import { Header, Footer } from "../../components/General";
 
 const Certifications = () => {
   return (
@@ -10,6 +10,7 @@ const Certifications = () => {
           Working on this page now, come back later
         </h2>
       </div>
+      <Footer />
     </>
   );
 };
