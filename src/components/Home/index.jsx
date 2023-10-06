@@ -1,4 +1,4 @@
-import Header from "./Header.jsx";
+import Header from "../General/Header.jsx";
 import MainSection from "./MainSection.jsx";
 import ServiceSection from "./ServiceSection.jsx";
 import ValueSection from "./ValueSection.jsx";

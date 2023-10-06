@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const checkmarkIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -55,12 +57,12 @@ const TutorialSection = () => {
           </li>
         </ul>
 
-        <a
+        <Link
           className="py-4 px-20 my-3 inline-block text-white uppercase bg-gradient-to-r from-[#FF4D54] to-[#007FFF] hover:bg-red-500 rounded-full"
-          href="#"
+          to="#"
         >
           join class
-        </a>
+        </Link>
       </div>
     </section>
   );

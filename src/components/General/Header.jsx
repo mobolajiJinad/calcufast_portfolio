@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { NavHashLink } from "react-router-hash-link";
 
-import HamburgerSVG from "../assets/hamburger.svg";
-import HamburgerOpenedSVG from "../assets/hamburgerOpen.svg";
+import HamburgerSVG from "../../assets/hamburger.svg";
+import HamburgerOpenedSVG from "../../assets/hamburgerOpen.svg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,13 +35,14 @@ const DropdownMenu = ({ isOpen }) => {
   return (
     <div
       style={{ top: isOpen ? "88px" : "-555px" }}
-      className="bg-slate-950 w-full pt-8 absolute left-0 sm:static sm:w-1/2 sm:p-0 transition ease delay-[0.3s]"
+      className="bg-slate-950 w-full pt-8 absolute left-0 sm:static sm:w-1/2 sm:p-0 transition-all ease duration-500"
     >
       <ul className="w-full px-3 last:border-b-0 sm:flex sm:flex-row sm:justify-around sm:items-center">
-        <MenuList navLink="#" navName="helo" />
-        <MenuList navLink="#" navName="helo" />
-        <MenuList navLink="#" navName="helo" />
-        <MenuList navLink="#" navName="helo" />
+        <MenuList navLink="/" navName="home" />
+        <MenuList navLink="/#services" navName="services" />
+        <MenuList navLink="/certifications" navName="certifications" />
+        <MenuList navLink="/blogs" navName="blogs" />
+        <MenuList navLink="/#contact" navName="contact" />
       </ul>
     </div>
   );
@@ -49,12 +51,13 @@ const DropdownMenu = ({ isOpen }) => {
 const MenuList = ({ navLink, navName }) => {
   return (
     <li className="py-3 border-b-2 border-b-slate-600 sm:py-0 sm:border-none sm:inline">
-      <a
-        className="text-slate-50 border-none w-full block text-lg uppercase sm:inline"
-        href={navLink}
+      <NavHashLink
+        smooth
+        className="text-slate-50 border-none w-full block text-lg uppercase sm:inline relative hover:text-red-400"
+        to={navLink}
       >
         {navName}
-      </a>
+      </NavHashLink>
     </li>
   );
 };

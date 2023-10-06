@@ -1,11 +1,11 @@
-import "./App.css";
+import "./Home.css";
 
-import components from "./components";
+import components from "../../components/Home";
 
 const { Header, MainSection, ServiceSection, ValueSection, TutorialSection, Footer } =
   components;
 
-function App() {
+const Home = () => {
   return (
     <div className="bg-[#0C0F16]">
       <Header />
@@ -20,6 +20,6 @@ function App() {
       <Footer></Footer>
     </div>
   );
-}
+};
 
-export default App;
+export default Home;

@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const ServiceSection = () => {
   return (
-    <section className="text-[#C8C8C8] bg-[#202123] pt-4 pb-10">
+    <section className="text-[#C8C8C8] bg-[#202123] pt-4 pb-10" id="services">
       <h3 className="text-center text-2xl uppercase tracking-wider my-4">services</h3>
 
       <div className="px-2 lg:flex lg:justify-around lg:items-center">
@@ -46,12 +48,12 @@ const Card = ({ title, paragraph, link }) => {
         <p className="px-4">{paragraph}</p>
       </div>
 
-      <a
-        href={link}
+      <Link
+        to={link}
         className="my-4 mb-5 px-10 lg:px-8 py-4 capitalize text-white text-lg rounded-[2.5rem] bg-gradient-to-br from-[#bb373c] to-[#07539e] hover:bg-red-500"
       >
         check them out &rarr;
-      </a>
+      </Link>
     </div>
   );
 };

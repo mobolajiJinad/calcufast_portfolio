@@ -7,7 +7,7 @@ const MainSection = () => {
         Calcufast
       </h1>
 
-      <div className="flex flex-wrap justify-between items-center">
+      <div className="flex flex-wrap justify-between items-center md:px-[5%]">
         <div className="mx-auto w-11/12 md:w-1/3 md:h-3/4 h-4/5   flex justify-center items-center text-2xl text-white uppercase py-40 border-2 border-gray-600 border-solid">
           placeholder image
         </div>
