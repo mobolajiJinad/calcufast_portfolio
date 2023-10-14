@@ -1,4 +1,4 @@
-import lightening from "../../assets/lightening.svg";
+import ValueImage from "../../assets/ValueInTheSignal.png";
 
 const ValueSection = () => {
   return (
@@ -8,15 +8,16 @@ const ValueSection = () => {
           style={{ fontFamily: "'Bungee Outline', cursive" }}
           className="text-2xl md:text-5xl uppercase text-white tracking-wider"
         >
-          value in the signal
+          1% better 🧘‍♂🌱
         </h3>
-        <img className="mx-1" src={lightening} />
       </div>
 
       <div className="flex flex-wrap px-5">
-        <div className="w-11/12 sm:w-4/5 mx-auto h-full flex justify-center items-center text-2xl uppercase py-40 border-2 text-white border-gray-600 border-solid lg:w-[45%]">
-          placeholder image
-        </div>
+        <img
+          src={ValueImage}
+          alt="Icon"
+          className="w-11/12 sm:w-4/5 max-h-[450px] block mx-auto lg:w-[45%]"
+        />
 
         <p className="text-white leading-relaxed p-3 pl-5 md:px-9 lg:w-1/2">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam explicabo a

@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 
+import MainProfile from "../../assets/CalcufastProfileMain.png";
+
 const MainSection = () => {
   return (
-    <section className="bg-slate-900 px-1 mt-[88px]">
+    <section
+      className="bg-slate-900 px-1 mt-[88px]"
+      style={{ background: "linear-gradient(200deg, #141518 50%, #111215 50%)" }}
+    >
       <h1
         style={{ fontFamily: "'Bungee Outline', cursive" }}
         className="text-5xl sm:text-7xl lg:text-9xl leading-10 uppercase font-extrabold opacity-10 text-gray-400 text-center py-8"
@@ -11,11 +16,11 @@ const MainSection = () => {
       </h1>
 
       <div className="flex flex-wrap justify-between items-center md:px-[5%]">
-        <div className="mx-auto w-11/12 md:w-1/3 md:h-3/4 h-4/5   flex justify-center items-center text-2xl text-white uppercase py-40 border-2 border-gray-600 border-solid">
-          placeholder image
+        <div className="mx-auto w-11/12 md:w-[40%] md:h-3/4 h-4/5 bg-[#11141b] rounded-3xl">
+          <img src={MainProfile} alt="Main profile picture" className="w-full" />
         </div>
 
-        <div className="w-full md:w-2/3">
+        <div className="w-full md:w-[60%]">
           <h4 className="py-4 m-auto w-4/5 md:text-3xl lg:text-4xl text-center leading-10 text-white text-3xl capitalize">
             Hello, my name is calcufast
           </h4>
@@ -29,14 +34,20 @@ const MainSection = () => {
 
         <div className="w-0.5 h-36 bg-gradient-to-r from-[#FF4D54] to-[#007FFF]"></div>
 
-        <ExperienceCard text1="30,000+" text2="impressions made" />
+        <ExperienceCard text1="20,000+" text2="impressions made" />
       </aside>
     </section>
   );
 };
 
 const TextChangingComponent = () => {
-  const phrases = ["Lorem ipsum dolor sit", "Consectetur adipiscing", "Sed do eiusmod"];
+  const phrases = [
+    "help you understand unconventional education and learning",
+    "am best friend to students and teachers.",
+    "influence for brands.",
+    "raise and mentor scholarpreneurs",
+    "am an edupreneur.",
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -63,7 +74,7 @@ const TextChangingComponent = () => {
   }, [currentIndex, textIndex]);
 
   return (
-    <h5 className="text-3xl text-white pl-[10%] lg:pl-[15%]">
+    <h5 className="text-2xl text-white text-center pl-[10%] lg:pl-[15%]">
       I{" "}
       <span
         style={{

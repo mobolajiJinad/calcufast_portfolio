@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import WhatsappImage from "../../assets/ComeToMyWhatsapp.png";
 
 const checkmarkIcon = (
   <svg
@@ -18,11 +19,9 @@ const checkmarkIcon = (
 const TutorialSection = () => {
   return (
     <section className="py-6 px-3 flex flex-wrap justify-between items-center">
-      <div className="mx-auto w-11/12 md:w-1/3 h-96 flex justify-center items-center text-2xl text-white uppercase py-40 border-2 border-gray-600 border-solid">
-        placeholder image
-      </div>
+      <img src={WhatsappImage} className="mx-auto w-11/12 md:w-[48%] py-40" />
 
-      <div className="w-full md:w-[60%] mt-3 ml-0.5">
+      <div className="w-full md:w-[48%] mt-3 ml-0.5">
         <h3 className="text-red-400 text-2xl uppercase">
           <span className="w-12 h-12 mr-2 inline-flex justify-center items-center border-4 border-red-400 border-solid rounded-full bg-transparent">
             ✔
