@@ -8,6 +8,7 @@ import {
   TutorialSection,
   Footer,
 } from "../../components/Home";
+import ScrollProgressIndicator from "../../components/Scroller/Scroller";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <TutorialSection />
       <div className="divider"></div>
       <Footer></Footer>
+      <ScrollProgressIndicator />
     </div>
   );
 };

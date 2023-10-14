@@ -1,0 +1,26 @@
+.progress-circle {
+  position: fixed;
+  bottom: 10px;
+  right: 12px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border: 2px solid #bb373c;
+  color: #bb373c;
+  font-size: 1.75rem;
+  border-radius: 50%;
+  animation: fill 5s linear forwards;
+  animation-delay: -5s; /* Initially hidden */
+}
+
+@keyframes fill {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

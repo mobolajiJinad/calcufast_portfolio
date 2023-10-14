@@ -1,3 +1,4 @@
+import ScrollProgressIndicator from "../../components/Scroller/Scroller";
 import {
   Testimonial,
   Impact,
@@ -26,6 +27,7 @@ const Tutorial = () => {
       <TutorialSection />
       <div style={divider}></div>
       <Footer />
+      <ScrollProgressIndicator />
     </div>
   );
 };

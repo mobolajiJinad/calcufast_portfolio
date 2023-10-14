@@ -1,4 +1,4 @@
-import ValueImage from "../../assets/ValueInTheSignal.png";
+import ValueImage from "../../assets/valueInTheSignal.png";
 
 const ValueSection = () => {
   return (
