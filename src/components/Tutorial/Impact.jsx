@@ -8,8 +8,8 @@ const Impact = () => {
         Calcufast
       </h1>
 
-      <div className="px-3 flex flex-wrap justify-between items-center">
-        <div className="w-11/12 md:w-2/3 text-white">
+      <div className="px-3 flex flex-wrap justify-between items-center lg:justify-around">
+        <div className="w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 text-white">
           <p className="w-full p-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A aspernatur, corporis
             alias dolorem, officiis amet dicta sed ea sunt consectetur qui fugiat? Cumque nulla

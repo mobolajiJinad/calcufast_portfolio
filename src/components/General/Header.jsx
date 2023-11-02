@@ -64,7 +64,6 @@ const DropdownMenu = ({ isOpen, closeMenu }) => {
         <MenuList navLink="/#top" navName="home" closeMenu={closeMenu} />
         <MenuList navLink="/tutorial" navName="tutorials" closeMenu={closeMenu} />
         <MenuList navLink="/certifications" navName="certifications" closeMenu={closeMenu} />
-        <MenuList navLink="/blogs" navName="blogs" closeMenu={closeMenu} />
         <MenuList navLink="/#contact" navName="contact" closeMenu={closeMenu} />
       </ul>
     </div>

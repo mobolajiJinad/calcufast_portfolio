@@ -23,7 +23,7 @@ const CertificationContainer = () => {
   };
 
   return (
-    <div className="mt-[90px] px-2">
+    <div className="mt-[90px] mb-[15px] px-2">
       <div
         className={
           model

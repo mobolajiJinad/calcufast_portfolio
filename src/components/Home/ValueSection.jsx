@@ -12,14 +12,14 @@ const ValueSection = () => {
         </h3>
       </div>
 
-      <div className="flex flex-wrap px-5">
+      <div className="flex flex-wrap px-5 items-center">
         <img
           src={ValueImage}
           alt="Icon"
           className="w-11/12 sm:w-4/5 max-h-[450px] block mx-auto lg:w-[45%]"
         />
 
-        <p className="text-white leading-relaxed p-3 pl-5 md:px-9 lg:w-1/2">
+        <p className="text-white leading-relaxed p-3 pl-3 md:px-9 lg:w-1/2">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi totam explicabo a
           sequi? Voluptatibus eaque nisi illum natus necessitatibus impedit quae id!
           <br />

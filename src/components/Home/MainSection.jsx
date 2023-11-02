@@ -34,7 +34,7 @@ const MainSection = () => {
 
         <div className="w-0.5 h-36 bg-gradient-to-r from-[#FF4D54] to-[#007FFF]"></div>
 
-        <ExperienceCard text1="20,000+" text2="impressions made" />
+        <ExperienceCard text1="750+" text2="impressions made" />
       </aside>
     </section>
   );
