@@ -4,14 +4,26 @@ import CloseIcon from "../../assets/hamburgerOpen.svg";
 const CertificationContainer = () => {
   const images = [
     { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg" },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg",
+    },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg",
+    },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg",
+    },
     { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29" },
     { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg" },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg",
+    },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg",
+    },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg",
+    },
   ];
 
   const [model, setModel] = useState(false);
@@ -23,23 +35,23 @@ const CertificationContainer = () => {
   };
 
   return (
-    <div className="mt-[90px] mb-[15px] px-2">
+    <div className="mb-[15px] mt-[90px] px-2">
       <div
         className={
           model
-            ? "w-full h-full fixed top-0 left-0 flex justify-center items-center overflow-hidden z-50 bg-black transition-opacity duration-400 ease-in-out visible opacity-100 scale-100"
-            : "w-full h-full fixed top-0 left-0 flex justify-center items-center invisible opacity-0 scale-0 overflow-hidden z-50 bg-black transition-opacity duration-400 ease-in-out"
+            ? "duration-400 visible fixed left-0 top-0 z-50 flex h-full w-full scale-100 items-center justify-center overflow-hidden bg-black opacity-100 transition-opacity ease-in-out"
+            : "duration-400 invisible fixed left-0 top-0 z-50 flex h-full w-full scale-0 items-center justify-center overflow-hidden bg-black opacity-0 transition-opacity ease-in-out"
         }
       >
         <img
           src={tempImgSrc}
-          className="w-auto max-w-full h-auto max-h-full block leading-none box-border py-5 mx-auto"
+          className="mx-auto box-border block h-auto max-h-full w-auto max-w-full py-5 leading-none"
         />
 
         <img
           src={CloseIcon}
           onClick={() => setModel(false)}
-          className="fixed top-3 right-3 w-8 h-8 p-1 bg-black cursor-pointer"
+          className="fixed right-3 top-3 h-8 w-8 cursor-pointer bg-black p-1"
         />
       </div>
 
@@ -47,7 +59,7 @@ const CertificationContainer = () => {
         {images.map((item, index) => {
           return (
             <div
-              className="transition-all duration-300 ease-in cursor-pointer mb-3 hover:opacity-80 border rounded-lg"
+              className="mb-3 cursor-pointer rounded-lg border transition-all duration-300 ease-in hover:opacity-80"
               key={index}
               onClick={() => getImg(item.src)}
             >

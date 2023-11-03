@@ -10,10 +10,10 @@ const MenuList = ({ navLink, navName, closeMenu }) => {
   };
 
   return (
-    <li className="py-3 border-b-2 border-b-slate-600 sm:py-0 sm:border-none sm:inline">
+    <li className="border-b-2 border-b-slate-600 py-3 sm:inline sm:border-none sm:py-0">
       <NavHashLink
         smooth
-        className="text-slate-50 border-none w-full block text-lg uppercase sm:inline relative hover:text-red-400"
+        className="relative block w-full border-none text-lg uppercase text-slate-50 hover:text-red-400 sm:inline"
         to={navLink}
         onClick={handleClick}
       >
@@ -35,12 +35,15 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      <nav className="px-3 py-6 flex justify-between items-center bg-slate-950 w-full">
+    <header className="fixed left-0 right-0 top-0 z-50">
+      <nav className="flex w-full items-center justify-between bg-slate-950 px-3 py-6">
         {/* THIS SHOULD BE A LOGO  */}
-        <div className="bg-slate-600 h-10 w-48 p-2">PLACEHOLDER LOGO</div>
+        <div className="h-10 w-48 bg-slate-600 p-2">PLACEHOLDER LOGO</div>
 
-        <div className="md:hidden hover:cursor-pointer last:mb-0" onClick={toggleMenu}>
+        <div
+          className="last:mb-0 hover:cursor-pointer md:hidden"
+          onClick={toggleMenu}
+        >
           {menuOpen ? (
             <img src={HamburgerOpenedSVG} alt="close menu" />
           ) : (
@@ -58,12 +61,20 @@ const DropdownMenu = ({ isOpen, closeMenu }) => {
   return (
     <div
       style={{ top: isOpen ? "88px" : "-555px" }}
-      className="bg-slate-950 w-full pt-8 absolute left-0 md:static md:w-2/3 lg:w-1/2 sm:p-0 sm:py-3 transition-all ease duration-500"
+      className="ease absolute left-0 w-full bg-slate-950 pt-8 transition-all duration-500 sm:p-0 sm:py-3 md:static md:w-2/3 lg:w-1/2"
     >
-      <ul className="w-full px-3 last:border-b-0 sm:flex sm:flex-row sm:justify-around sm:items-center">
+      <ul className="w-full px-3 last:border-b-0 sm:flex sm:flex-row sm:items-center sm:justify-around">
         <MenuList navLink="/#top" navName="home" closeMenu={closeMenu} />
-        <MenuList navLink="/tutorial" navName="tutorials" closeMenu={closeMenu} />
-        <MenuList navLink="/certifications" navName="certifications" closeMenu={closeMenu} />
+        <MenuList
+          navLink="/tutorial"
+          navName="tutorials"
+          closeMenu={closeMenu}
+        />
+        <MenuList
+          navLink="/certifications"
+          navName="certifications"
+          closeMenu={closeMenu}
+        />
         <MenuList navLink="/#contact" navName="contact" closeMenu={closeMenu} />
       </ul>
     </div>
